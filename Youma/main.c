@@ -131,5 +131,6 @@ void main(void)
         seq++;
         temperature = read_die_temperature();
         build_payload(seq, temperature);
+        bt_le_adv_update_data(adv_data, ARRAY_SIZE(adv_data), NULL, 0);
     }
 }
